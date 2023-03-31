@@ -19,16 +19,14 @@ def get_coefs(x, y):
     model = LinearRegression()
     model.fit(x, y)
 
-    regression_coef = model.coef_
     r_squared = model.score(x, y)
 
-    return regression_coef, r_squared
+    return r_squared
 
 
 x, y = get_x_y()
-regression_coef, r_squared = get_coefs(x, y)
+r_squared = get_coefs(x, y)
 
-print(f'coefficient of regression: {regression_coef[0][0]:.2f}')
 print(f'R-squared (determination coefficient): {r_squared:.2f}\n')
 
 def get_real_changing_of_ethusdt(price):
